@@ -13,7 +13,7 @@ class DbSyncCommand extends Command
     public function handle(): bool
     {
         $inTest = $this->option('test');
-
+        echo "Prova";
         if (! in_array(config('app.env'), config('dbsync.environments'))) {
             $this->error('DB sync will only run on local and staging environments');
 
